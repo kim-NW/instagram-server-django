@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "instargram-server-django"
+version = "0.1.0"
+description = ""
+authors = ["NamWook Kim <kimnamwook08@gmail.com>"]
+readme = "README.md"
+packages = [{include = "instargram_server_django"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
