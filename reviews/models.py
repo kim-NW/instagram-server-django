@@ -5,6 +5,22 @@ from common.models import CommonModel
 
 # USER
 # FEED
+
+
 class Review(CommonModel):
-  caption = models.CharField(max_length=150)
-  
+    caption = models.CharField(max_length=150)
+
+    user = models.ForeignKey(
+        "users.User",
+        on_delete=models.CASCADE,
+        related_name="reviews"
+    )
+
+    feed = models.ForeignKey(
+        "feeds.Feed",
+        on_delete=models.CASCADE,
+        related_name="reviews"
+    )
+
+    def __str__(self) -> str:
+      return self.caption

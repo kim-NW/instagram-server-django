@@ -6,4 +6,3 @@ class ReviewAdmin(admin.ModelAdmin):
   list_display = (
     "caption",
   )
-# Register your models here.
