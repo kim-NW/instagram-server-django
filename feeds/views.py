@@ -12,7 +12,7 @@ from users.models import User
 
 class MyFeed(APIView):
 
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def get(self, request):  # Read
         feed = Feed.objects.all()
@@ -30,7 +30,7 @@ class MyFeed(APIView):
 
 class SelectFeed(APIView):
 
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def get(self, request, username):
         print("username", username)
